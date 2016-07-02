@@ -9,8 +9,11 @@ app.controller('myCtrl', function($scope) {
 
 	for (var i = 0; i < path.length; i++) {
       
-		var dep = path[i].getAttribute('data-num');
+	    path[i].addEventListener("click", function(e){
+	      console.log("Dpt: "+e.target.getAttribute('data-num'));
+	    })
+		/*var dep = path[i].getAttribute('data-num');
 		console.log('dep : ');
-		console.log(dep);
+		console.log(dep);*/
     }
 });
